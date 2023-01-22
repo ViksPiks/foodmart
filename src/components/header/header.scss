@@ -1,0 +1,193 @@
+.main-header {
+  padding: 49px 0 32px;
+
+  .main-header-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 1110px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @media (max-width: 750px) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    .logo {
+      max-width: 242px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      @media (max-width: 1370px) {
+        gap: 0;
+      }
+
+      @media (max-width: 1110px) {
+        gap: 12px;
+      }
+
+      img {
+        min-width: 52px;
+      }
+
+      .logo-capture {
+        h1 {
+          font-family: JosefinSans-Bold, sans-serif;
+          font-size: 31px;
+          letter-spacing: -0.04em;
+          text-transform: uppercase;
+          color: #222;
+
+          .accent {
+            color: #ffc43f;
+          }
+        }
+
+        .description {
+          color: #818181;
+          text-transform: uppercase;
+          letter-spacing: 0.2em;
+        }
+
+        @media (max-width: 1370px) {
+          display: none;
+        }
+
+        @media (max-width: 1110px) {
+          display: block;
+        }
+      }
+    }
+
+    .search-bar {
+      background-color: #f8f8f8;
+      display: flex;
+      max-width: 652px;
+      min-width: 580px;
+      flex-grow: 1;
+
+      @media (max-width: 1110px) {
+        order: 1;
+      }
+
+      @media (max-width: 750px) {
+        display: none;
+      }
+
+      select {
+        font-size: 16px;
+        letter-spacing: 0.02em;
+        font-family: OpenSans-SemiBold, sans-serif;
+        border: none;
+        background-color: transparent;
+        padding: 13px;
+        border-right: 25px solid transparent;
+      }
+
+      .divider {
+        padding: 13px 0;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 1px;
+          height: 24px;
+          background-color: #dedede;
+        }
+      }
+
+      input {
+        border: none;
+        background-color: #f8f8f8;
+        padding: 13px 21px;
+        flex: 1;
+
+        &::placeholder {
+          color: #9d9d9d;
+          font-size: 16px;
+          letter-spacing: 0.01em;
+        }
+      }
+
+      .search-btn {
+        border: none;
+        background-color: transparent;
+        padding: 16px 25px;
+      }
+    }
+
+    .call {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+
+      @media (max-width: 750px) {
+        display: none;
+      }
+
+      .phone {
+        font-size: 18px;
+        font-family: OpenSans-SemiBold, sans-serif;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+      }
+    }
+
+    .title {
+      color: #898989;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    .user-capture {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      @media (max-width: 750px) {
+        display: none;
+      }
+
+      .user-cabinet {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          display: flex;
+          border-radius: 100%;
+          background-color: #f1f1f1;
+          padding: 12px 13px;
+        }
+      }
+
+      .your-cart {
+        display: flex;
+        flex-direction: column;
+
+        .amount {
+          font-size: 18px;
+          font-family: OpenSans-SemiBold, sans-serif;
+        }
+      }
+    }
+
+    .burger {
+      display: none;
+      border: none;
+      background-color: transparent;
+      justify-content: center;
+      align-items: center;
+
+      @media (max-width: 750px) {
+        display: flex;
+      }
+    }
+  }
+}

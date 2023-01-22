@@ -1,2 +1,45 @@
-header
-  h1 This is a header
+header.main-header
+  .container
+    .main-header-wrapper
+      a.logo(href="/")
+        img(src="../assets/images/logo.webp")
+        .logo-capture
+          h1 Food
+            span.accent mart
+          span.description Grocery Store
+      form.search-bar
+        select(name="category")
+          option(value="all") All Categories
+          option(value="meat") Meat
+          option(value="fruits") Fruits
+        .divider
+        input(
+          type="search",
+          name="gsearch",
+          placeholder="Search for more than 20,000 products"
+        )
+        button.search-btn(type="submit")
+          svg(width="16px", height="16px")
+            use(href="../assets/svg/magnifying-glass.svg#magnifying-glass")
+      .call
+        span.title For support ?
+        a.phone(href="tel:+980-34984089") +980-34984089
+      .user-capture
+        .user-cabinet
+          a(href="#")
+            svg(width="10px", height="12px")
+              use(href="../assets/svg/user.svg#user")
+          a(href="#")
+            svg(width="12px", height="13px")
+              use(href="../assets/svg/heart.svg#heart")
+          a(href="#")
+            svg(width="11px", height="12px")
+              use(href="../assets/svg/cart.svg#cart")
+        .your-cart
+          span.title Your Cart
+          span.amount $1290.00
+      button.burger
+        svg(viewBox="0 0 100 80", width="30", height="30")
+          rect(width="80", height="10")
+          rect(y="25", width="80", height="10")
+          rect(y="50", width="80", height="10")
