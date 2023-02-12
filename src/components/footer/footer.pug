@@ -1,2 +1,67 @@
-footer
-  h1 This is a footer
+footer.main-footer
+  .container
+    .main-footer-wrapper
+      .media-capture
+        a.logo(href="/")
+          img(src="../assets/images/logo.webp")
+          .logo-capture
+            h1 Food
+              span.accent mart
+            span.description Grocery Store
+        .social-media-capture
+          a.facebook(href="#")
+            svg(width="7px", height="20px")
+              use(href="../assets/svg/facebook.svg#facebook")
+          a.tweeter(href="#")
+            svg(width="17px", height="20px")
+              use(href="../assets/svg/tweeter.svg#tweeter")
+          a.pinterest(href="#")
+            svg(width="17px", height="20px")
+              use(href="../assets/svg/pinterest.svg#pinterest")
+          a.instagramm(href="#")
+            svg(width="15px", height="15px")
+              use(href="../assets/svg/instagram.svg#instagram")
+          a.youtube(href="#")
+            svg(width="18px", height="20px")
+              use(href="../assets/svg/youtube.svg#youtube")
+      ul.links Quick links
+        li
+          a(href="#") Home
+        li
+          a(href="#") About us
+        li
+          a(href="#") Offers
+        li
+          a(href="#") Services
+        li
+          a(href="#") Contact us
+
+      ul.links About
+        li
+          a(href="#") How it work
+        li
+          a(href="#") Our packages
+        li
+          a(href="#") Promotions
+        li
+          a(href="#") Refer a friend
+
+      ul.links Help Centre
+        li
+          a(href="#") Payments
+        li
+          a(href="#") Shipping
+        li
+          a(href="#") Product returns
+        li
+          a(href="#") FAQ
+        li
+          a(href="#") Checkout
+      .newsletter-capture
+        h3 Our newsletter
+        p.discription Subscribe to our newsletter to get updates about our grand offers.
+        .input-capture
+          input.input(type="text", placeholder="Enter your email-address")
+          button.send-btn(type="submit") Send
+            svg(width="12px", height="12px")
+              use(href="../assets/svg/send.svg#send")
