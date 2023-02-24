@@ -1,0 +1,47 @@
+.main-nav {
+  margin-bottom: 100px;
+
+  .nav-capture {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+
+    select {
+      border: none;
+      font-size: 16px;
+      background-color: transparent;
+      font-family: OpenSans-Regular, sans-serif;
+    }
+
+    .menu {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .menu-item {
+        a {
+          border-radius: 6px;
+          padding: 8px 24px;
+
+          &:hover {
+            background: #ffc43f;
+          }
+        }
+      }
+    }
+
+    .get-coupon {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      .get-coupon-code {
+        font-family: OpenSans-Semibold, sans-serif;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
