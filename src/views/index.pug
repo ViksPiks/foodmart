@@ -1,6 +1,35 @@
 extends layout.pug
 
 block head
-  title Home
+  link(rel="stylesheet", href="index.scss")
 
 block content
+  section.sale-cards
+    .container
+      .cards-capture
+        .card.card-blue
+          .txt-capture
+            span.natural 100% Natural
+            h3.smoothie Fresh Smoothie &amp; Summer Juice
+            p Best selling summer juice with natural extracts.
+            a.shop-now-btn(href="#") Shop now
+          img.smoothie-bottle(
+            src="../assets/images/smothie.png",
+            alt="smoothie"
+          )
+        .card.card-green
+          .txt-capture.small-card
+            span 20% Off
+            h3 Fruits &amp; Vegetables
+            a.shop-category(href="#") Shop the category
+              svg(width="8px", height="8px")
+                use(href="../assets/svg/arrow.svg#arrow")
+          img.fruits(src="../assets/images/fruits.png", alt="fruits")
+        .card.card-brown
+          .txt-capture.small-card
+            span 15% Off
+            h3 Bakery Products
+            a.shop-category(href="#") Shop the category
+              svg(width="8px", height="8px")
+                use(href="../assets/svg/arrow.svg#arrow")
+          img.bakery(src="../assets/images/bakery.png", alt="bakery")

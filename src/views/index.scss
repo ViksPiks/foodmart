@@ -1,0 +1,145 @@
+section.sale-cards {
+  background-image: url("/src/assets/images/bg.jpg");
+  padding: 107px 0;
+  margin-bottom: 55px;
+
+  .cards-capture {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+
+    @media (max-width: 1430px) {
+      grid-template-columns: 1fr;
+    }
+    @media (max-width: 1240px) {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      border-radius: 12px;
+      align-items: flex-end;
+    }
+
+    .card-blue {
+      grid-row: 1 / 3;
+      background-color: #e6f3fa;
+      align-items: center;
+      padding: 31px 30px 31px 100px;
+
+      @media (max-width: 1430px) {
+        padding-left: 50px;
+      }
+
+      .smoothie-bottle {
+        @media (max-width: 920px) {
+          max-height: 300px;
+        }
+
+        @media (max-width: 558px) {
+          max-height: 200px;
+        }
+      }
+
+      .txt-capture {
+        .natural {
+          color: #ed8939;
+          font-size: 27px;
+          margin-bottom: 22px;
+          display: block;
+        }
+
+        .smoothie {
+          font-size: 54px;
+          letter-spacing: 0.02em;
+          font-family: Nunito-Bold, sans-serif;
+          margin-bottom: 22px;
+
+          @media (max-width: 743px) {
+            font-size: 34px;
+          }
+        }
+
+        p {
+          color: #727272;
+          font-size: 18px;
+          line-height: 25px;
+          margin-bottom: 60px;
+        }
+
+        .shop-now-btn {
+          text-transform: uppercase;
+          padding: 16px 42px;
+          border: 1px solid #222;
+          border-radius: 4px;
+          letter-spacing: 0.04em;
+          display: inline-block;
+        }
+      }
+    }
+
+    .card-green {
+      background-color: #eef5e4;
+
+      .small-card {
+        padding: 61px 0 61px 50px;
+
+        span {
+          font-size: 35px;
+          display: block;
+          margin-bottom: 20px;
+        }
+
+        h3 {
+          font-family: Nunito-Bold, sans-serif;
+          font-size: 33px;
+          margin-bottom: 25px;
+        }
+
+        .shop-category {
+          text-transform: capitalize;
+          font-size: 18px;
+        }
+      }
+
+      .fruits {
+        @media (max-width: 663px) {
+          max-height: 120px;
+        }
+      }
+    }
+
+    .card-brown {
+      background-color: #f9ebe7;
+
+      .small-card {
+        padding: 61px 0 61px 50px;
+
+        span {
+          font-size: 35px;
+          display: block;
+          margin-bottom: 20px;
+        }
+
+        h3 {
+          font-family: Nunito-Bold, sans-serif;
+          font-size: 33px;
+          margin-bottom: 25px;
+        }
+
+        .shop-category {
+          text-transform: capitalize;
+          font-size: 18px;
+        }
+      }
+
+      .bakery {
+        @media (max-width: 663px) {
+          max-height: 150px;
+        }
+      }
+    }
+  }
+}
