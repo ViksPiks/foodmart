@@ -1,5 +1,6 @@
 extends layout.pug
 include ../components/category-card/category-card.pug
+include ../components/new-arrivals-card/new-arrivals-card.pug
 
 block head
   link(rel="stylesheet", href="index.scss")
@@ -38,7 +39,7 @@ block content
     .container
       .txt-wrapper
         h2 Category
-        a.see-all(href="#") View All Categories
+        a.see-all(href="#") View all categories
           svg.arrow(width="8px", height="8px")
             use(href="../assets/svg/arrow-grey.svg#arrow-grey")
       .category-cards
@@ -48,3 +49,15 @@ block content
         +category-card("Oil & Ghee", "../assets/svg/gift.svg#gift",)
         +category-card("Raw Meat", "..//assets/svg/gift.svg#gift",)
         +category-card("Natural Herbs", "../assets/svg/gift.svg#gift",)
+  section.new-arrivals
+    .container
+      .txt-wrapper
+        h2 Newly arrived brands
+        a.see-all(href="#") View all categories
+          svg.arrow(width="8px", height="8px")
+            use(href="../assets/svg/arrow-grey.svg#arrow-grey")
+      .new-arrivals-cards
+        +new-arrivals-card("../assets/images/jar.png", "Amber Jar", "Honey best nectar you wish to get")
+        +new-arrivals-card("../assets/images/herb.png", "Pure Herb", "Pure herb the only natural brand")
+        +new-arrivals-card("../assets/images/tuna.png", "Tuna", "Where's tuna? Tuna, clear choice!")
+        +new-arrivals-card("../assets/images/hotz.png", "Hotz", "the one junk food that’s natural")

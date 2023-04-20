@@ -1,4 +1,5 @@
 @use "../components/category-card/category-card.scss";
+@use "../components/new-arrivals-card/new-arrivals-card.scss";
 
 section.sale-cards {
   background-image: url("/src/assets/images/bg.jpg");
@@ -147,7 +148,7 @@ section.sale-cards {
 }
 
 section.category {
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 
   .txt-wrapper {
     display: flex;
@@ -156,10 +157,12 @@ section.category {
 
     h2 {
       margin-bottom: 50px;
+      text-transform: capitalize;
     }
 
     .see-all {
       color: #787878;
+      text-transform: capitalize;
 
       .arrow {
         margin-left: 10px;
@@ -177,6 +180,44 @@ section.category {
     }
     @media (max-width: 690px) {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+section.new-arrivals {
+  margin-bottom: 100px;
+
+  .txt-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    h2 {
+      margin-bottom: 50px;
+      text-transform: capitalize;
+    }
+
+    .see-all {
+      color: #787878;
+      text-transform: capitalize;
+
+      .arrow {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .new-arrivals-cards {
+    display: grid;
+    gap: 33px;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+
+    @media (max-width: 1400px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 725px) {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

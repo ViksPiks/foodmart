@@ -1,0 +1,33 @@
+.new-arrivals-card {
+  display: flex;
+  gap: 15px;
+  padding: 16px 15px;
+  border: 1px solid #fbfbfb;
+  box-shadow: 0 5px 22px rgb(0 0 0 /4%);
+  border-radius: 16px;
+
+  .product-image {
+    border-radius: 12px;
+  }
+
+  .txt-capture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .arrivals-card-title {
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: 0.02em;
+      text-transform: capitalize;
+      color: #c7c7c7;
+      margin-bottom: 10px;
+    }
+
+    .card-info {
+      text-transform: capitalize;
+      font-size: 17px;
+      line-height: 28px;
+    }
+  }
+}

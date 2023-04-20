@@ -1,0 +1,6 @@
+mixin new-arrivals-card(imgUrl, title, description)
+  a.new-arrivals-card
+    img.product-image(src=imgUrl, alt="food")
+    .txt-capture
+      h3.arrivals-card-title(href="productLink")= title
+      span.card-info(href="#")= description
