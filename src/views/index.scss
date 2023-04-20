@@ -1,3 +1,5 @@
+@use "../components/category-card/category-card.scss";
+
 section.sale-cards {
   background-image: url("/src/assets/images/bg.jpg");
   padding: 107px 0;
@@ -140,6 +142,41 @@ section.sale-cards {
           max-height: 150px;
         }
       }
+    }
+  }
+}
+
+section.category {
+  margin-bottom: 150px;
+
+  .txt-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    h2 {
+      margin-bottom: 50px;
+    }
+
+    .see-all {
+      color: #787878;
+
+      .arrow {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .category-cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 33px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 690px) {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

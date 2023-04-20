@@ -1,4 +1,5 @@
 extends layout.pug
+include ../components/category-card/category-card.pug
 
 block head
   link(rel="stylesheet", href="index.scss")
@@ -33,3 +34,17 @@ block content
               svg(width="8px", height="8px")
                 use(href="../assets/svg/arrow.svg#arrow")
           img.bakery(src="../assets/images/bakery.png", alt="bakery")
+  section.category
+    .container
+      .txt-wrapper
+        h2 Category
+        a.see-all(href="#") View All Categories
+          svg.arrow(width="8px", height="8px")
+            use(href="../assets/svg/arrow-grey.svg#arrow-grey")
+      .category-cards
+        +category-card("Fruits & Veges", "../assets/svg/gift.svg#gift",)
+        +category-card("Breads & Sweets", "../assets/svg/gift.svg#gift",)
+        +category-card("Wine Drinks", "../assets/svg/gift.svg#gift",)
+        +category-card("Oil & Ghee", "../assets/svg/gift.svg#gift",)
+        +category-card("Raw Meat", "..//assets/svg/gift.svg#gift",)
+        +category-card("Natural Herbs", "../assets/svg/gift.svg#gift",)
