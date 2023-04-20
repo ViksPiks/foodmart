@@ -8,6 +8,11 @@
   border-radius: 16px;
   height: 200px;
 
+  &:hover {
+    background-color: #fff;
+    box-shadow: 0 21px 44px rgb(0 0 0 /8%);
+  }
+
   .category-title {
     font-size: 20px;
     font-family: OpenSans-SemiBold, sans-serif;
