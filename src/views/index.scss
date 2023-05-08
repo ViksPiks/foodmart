@@ -1,5 +1,6 @@
 @use "../components/category-card/category-card.scss";
 @use "../components/new-arrivals-card/new-arrivals-card.scss";
+@use "../components/trending-products/trending-products-card.scss";
 
 section.sale-cards {
   background-image: url("/src/assets/images/bg.jpg");
@@ -217,6 +218,64 @@ section.new-arrivals {
       grid-template-columns: repeat(2, 1fr);
     }
     @media (max-width: 725px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+section.trending-products {
+  margin-bottom: 100px;
+
+  .txt-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    h2 {
+      text-transform: capitalize;
+      margin-bottom: 10px;
+    }
+
+    .trending-products-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      color: #858585;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-size: 16px;
+      margin-bottom: 10px;
+
+      .menu-item {
+        &:hover {
+          color: #222;
+        }
+
+        &:active {
+          color: #ed8939;
+        }
+      }
+    }
+  }
+
+  .trending-products-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+
+    @media (max-width: 1400px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 1160px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 375px) {
       grid-template-columns: repeat(1, 1fr);
     }
   }

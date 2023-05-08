@@ -1,6 +1,7 @@
 extends layout.pug
 include ../components/category-card/category-card.pug
 include ../components/new-arrivals-card/new-arrivals-card.pug
+include ../components/trending-products/trending-products-card.pug
 
 block head
   link(rel="stylesheet", href="index.scss")
@@ -61,3 +62,35 @@ block content
         +new-arrivals-card("../assets/images/herb.png", "Pure Herb", "Pure herb the only natural brand")
         +new-arrivals-card("../assets/images/tuna.png", "Tuna", "Where's tuna? Tuna, clear choice!")
         +new-arrivals-card("../assets/images/hotz.png", "Hotz", "the one junk food that’s natural")
+  section.trending-products
+    .container
+      .txt-wrapper
+        h2 Trending products
+        .trending-products-capture
+          ul.trending-products-nav
+            li.menu-item
+              a(href="#") All
+            li.menu-item
+              a(href="#") Fruits &amp; Veges
+            li.menu-item
+              a(href="#") Juices
+            li.menu-item
+              a(href="#") Breads &amp; Sweets
+            li.menu-item
+              a(href="#") Oil &amp; Ghee
+            li.menu-item
+              a(href="#") Raw Meats
+            li.menu-item
+              a(href="#") Natural Herbs
+
+      .trending-products-cards
+        +trending-products-card("../assets/images/watermelon-juice.png", "Sunstar fresh melon juice", "unit", "4.5", "$18.00")
+        +trending-products-card("../assets/images/tomatos.png", "Fresh local tomatoes", "kg", "4.0", "$5.00")
+        +trending-products-card("../assets/images/cucumber.png", "Fresh cucumber", "kg", "4.5", "$6.00")
+        +trending-products-card("../assets/images/tomatketchup.png", "Heinz tomato ketchup", "unit", "5.0", "$9.00")
+        +trending-products-card("../assets/images/avocados.png", "Local avocado", "kg", "3.5", "$12.00")
+        +trending-products-card("../assets/images/biscuits.png", "Munch crunchy cookies", "unit", "4.5", "$8.00")
+        +trending-products-card("../assets/images/bananas.png", "Fresh bananas", "kg", "4.0", "$12.00")
+        +trending-products-card("../assets/images/orange-juice.png", "Fresh orange juice", "unit", "4.5", "$10.00")
+        +trending-products-card("../assets/images/milk.png", "Pure dairy milk ", "unit", "5.0", "$12.00")
+        +trending-products-card("../assets/images/raspberries.png", "Raspberries", "kg", "3.5", "$12.00")

@@ -1,0 +1,22 @@
+mixin trending-products-card(imgUrl, title, measure, reviews, price)
+  .trending-products-card
+    .background
+      .like-icon
+        svg.heart-icon(width="16px", height="13px")
+          use(href="../assets/svg/heart-outline.svg#heart")
+      img.product-image(src=imgUrl, alt="food")
+    h3= title
+    .txt-capture
+      span.measure= measure
+      .reviews-capture
+        svg.star-icon(width="11px", height="11px")
+          use(href="../assets/svg/star.svg#star")
+        span.reviews= reviews
+    span.price= price
+    .btn-capture
+      button.count-btn &#45;
+      span 0
+      button.count-btn &#43;
+      button.add-to-cart Add to cart
+        svg.cart-icon(width="14px", height="12px")
+          use(href="../assets/svg/cart.svg#cart")
