@@ -100,6 +100,7 @@ section.sale-cards {
           font-family: Nunito-Bold, sans-serif;
           font-size: 33px;
           margin-bottom: 25px;
+          text-transform: capitalize;
         }
 
         .shop-category {
@@ -131,6 +132,7 @@ section.sale-cards {
           font-family: Nunito-Bold, sans-serif;
           font-size: 33px;
           margin-bottom: 25px;
+          text-transform: capitalize;
         }
 
         .shop-category {
@@ -224,7 +226,7 @@ section.new-arrivals {
 }
 
 section.trending-products {
-  margin-bottom: 100px;
+  margin-bottom: 160px;
 
   .txt-wrapper {
     display: flex;
@@ -277,6 +279,93 @@ section.trending-products {
     }
     @media (max-width: 375px) {
       grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+section.sales-cards {
+  background-image: url("../assets/images/leaves-pattern.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top -160px left -10px;
+  margin-bottom: 150px;
+
+  .sales-cards-capture {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @media (max-width: 865px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sale-card {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 2 1;
+      gap: 10px;
+      max-width: 784px;
+      border-radius: 12px;
+      padding: 80px;
+
+      .discount {
+        color: #dd5c80;
+        text-transform: capitalize;
+      }
+
+      .shop-it-btn {
+        background-color: #222;
+        color: #ffff;
+        text-transform: uppercase;
+        padding: 10px 25px;
+        border-radius: 4px;
+        display: inline-block;
+        white-space: nowrap;
+      }
+
+      &.card-orange {
+        background-color: #ffeada;
+        background-image: url("../assets/images/bg_pattern.png");
+
+        h3 {
+          text-transform: capitalize;
+          font-size: 34px;
+          margin-bottom: 5px;
+        }
+
+        p {
+          color: #777;
+          letter-spacing: 0.03em;
+          margin-bottom: 30px;
+        }
+
+        img {
+          max-width: 300px;
+          max-height: 200px;
+        }
+      }
+
+      &.card-blue {
+        background-color: #e1f7f9;
+        background-image: url("../assets/images/bg_pattern.png");
+
+        h3 {
+          text-transform: capitalize;
+          font-size: 34px;
+          margin-bottom: 5px;
+        }
+
+        p {
+          color: #777;
+          letter-spacing: 0.03em;
+          margin-bottom: 30px;
+        }
+
+        img {
+          max-width: 300px;
+          max-height: 200px;
+        }
+      }
     }
   }
 }
