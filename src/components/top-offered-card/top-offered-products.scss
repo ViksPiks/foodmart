@@ -1,4 +1,4 @@
-.trending-products-card {
+.top-offered-card {
   display: flex;
   flex-direction: column;
   border: 1px solid #fbfbfb;
@@ -19,19 +19,37 @@
     height: 235px;
     margin-bottom: 12px;
 
-    .like-icon {
+    .like-icon-wrapper {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      background: #fff;
-      border: 1px solid #eaeaea;
-      border-radius: 50px;
-      height: 30px;
-      width: 30px;
+      padding: 5px;
+
+      .like-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        border: 1px solid #eaeaea;
+        border-radius: 50px;
+        height: 30px;
+        width: 30px;
+      }
+
+      .sale-badge {
+        background-color: #a3bf4c;
+        color: #fff;
+        border-radius: 4px;
+        width: 44px;
+        height: 20px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 
-  .product-image {
+  .product-img {
     margin: 0 auto;
     display: block;
   }
@@ -62,10 +80,26 @@
     }
   }
 
-  .price {
-    font-size: 22px;
-    font-family: OpenSans-SemiBold, sans-serif;
-    margin-bottom: 14px;
+  .price-capture {
+    margin-bottom: 9px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .price {
+      color: #a8a8a8;
+      text-decoration: line-through;
+    }
+
+    .new-price {
+      font-size: 22px;
+      font-family: OpenSans-SemiBold, sans-serif;
+    }
+  }
+
+  .sold {
+    color: #ed8939;
+    margin-bottom: 13px;
   }
 
   .btn-capture {

@@ -2,6 +2,7 @@ extends layout.pug
 include ../components/category-card/category-card.pug
 include ../components/new-arrivals-card/new-arrivals-card.pug
 include ../components/trending-products/trending-products-card.pug
+include ../components/top-offered-card/top-offered-products.pug
 
 block head
   link(rel="stylesheet", href="index.scss")
@@ -112,3 +113,13 @@ block content
             p Very tasty & creamy vanilla flavour creamy muffins.
             a.shop-it-btn(href="#") Shop now
           img(src="../assets/images/muffin.png", alt="chocolate")
+
+  section.top-offered
+    .container
+      h2.top-offered-txt Top offered products
+      .top-offered-products-cards
+        +top-offered-card("../assets/images/barista-milk.png", "-25%", "Pacific barista beverage", "unit", "4.5", "$12.00", "$8.00", "Sold: 30/40")
+        +top-offered-card("../assets/images/kombucha.png", "-35%", "Kombucha local lilikoi", "unit", "4.0", "$8.00", "$6.00", "Sold: 9/25")
+        +top-offered-card("../assets/images/lays.png", "-15%", "Cheese flavoured Lays", "unit", "4.5", "$10.00", "$8.00", "Sold: 23/50")
+        +top-offered-card("../assets/images/oat-milk.png", "-12%", "Oat milk barista", "unit", "5.0", "$8.00", "$5.00", "Sold: 12/35")
+        +top-offered-card("../assets/images/relax-hearts.png", "-10%", "Dr. raw relax hearts", "unit", "3.0", "$5.00", "$3.00", "Sold: 5/25")

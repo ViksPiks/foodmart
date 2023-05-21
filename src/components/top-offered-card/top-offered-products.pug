@@ -1,0 +1,27 @@
+mixin top-offered-card(imgUrl, discount, title, measure, reviews, price, newprice, availability)
+  .top-offered-card
+    .background
+      .like-icon-wrapper
+        .sale-badge= discount
+        .like-icon
+          svg.heart-icon(width="16px", height="13px")
+            use(href="../assets/svg/heart-outline.svg#heart")
+      img.product-img(src=imgUrl, alt="food")
+    h3= title
+    .txt-capture
+      span.measure= measure
+      .reviews-capture
+        svg.star-icon(width="11px", height="11px")
+          use(href="../assets/svg/star.svg#star")
+        span.reviews= reviews
+    .price-capture
+      span.price= price
+      span.new-price= newprice
+    span.sold= availability
+    .btn-capture
+      button.count-btn &#45;
+      span 0
+      button.count-btn &#43;
+      button.add-to-cart Add to cart
+        svg.cart-icon(width="14px", height="12px")
+          use(href="../assets/svg/cart.svg#cart")

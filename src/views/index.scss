@@ -1,6 +1,7 @@
 @use "../components/category-card/category-card.scss";
 @use "../components/new-arrivals-card/new-arrivals-card.scss";
 @use "../components/trending-products/trending-products-card.scss";
+@use "../components/top-offered-card/top-offered-products.scss";
 
 section.sale-cards {
   background-image: url("/src/assets/images/bg.jpg");
@@ -366,6 +367,31 @@ section.sales-cards {
           max-height: 200px;
         }
       }
+    }
+  }
+}
+
+section.top-offered {
+  .top-offered-txt {
+    margin-bottom: 50px;
+  }
+
+  .top-offered-products-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+
+    @media (max-width: 1400px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 1160px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 375px) {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
