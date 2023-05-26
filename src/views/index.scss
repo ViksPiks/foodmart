@@ -2,6 +2,7 @@
 @use "../components/new-arrivals-card/new-arrivals-card.scss";
 @use "../components/trending-products/trending-products-card.scss";
 @use "../components/top-offered-card/top-offered-products.scss";
+@use "../components/inputs/input.scss";
 
 section.sale-cards {
   background-image: url("/src/assets/images/bg.jpg");
@@ -372,6 +373,8 @@ section.sales-cards {
 }
 
 section.top-offered {
+  margin-bottom: 150px;
+
   .top-offered-txt {
     margin-bottom: 50px;
   }
@@ -392,6 +395,59 @@ section.top-offered {
     }
     @media (max-width: 375px) {
       grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+section.news-letter {
+  background: #e9f3f8;
+  padding: 100px;
+
+  .news-letter-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .text-wrapper {
+      max-width: 450px;
+
+      .form-header {
+        font-size: 50px;
+        margin-bottom: 28px;
+        text-transform: capitalize;
+
+        @media (max-width: 900px) {
+          font-size: 30px;
+          margin-bottom: 15px;
+        }
+      }
+
+      .form-txt {
+        font-size: 18px;
+        line-height: 225%;
+        color: #555;
+      }
+    }
+
+    .form-capture {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+
+      .register-btn {
+        background-color: #222;
+        color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        border: none;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
     }
   }
 }

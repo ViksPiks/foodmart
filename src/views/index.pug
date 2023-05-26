@@ -3,6 +3,7 @@ include ../components/category-card/category-card.pug
 include ../components/new-arrivals-card/new-arrivals-card.pug
 include ../components/trending-products/trending-products-card.pug
 include ../components/top-offered-card/top-offered-products.pug
+include ../components/inputs/input.pug
 
 block head
   link(rel="stylesheet", href="index.scss")
@@ -123,3 +124,18 @@ block content
         +top-offered-card("../assets/images/lays.png", "-15%", "Cheese flavoured Lays", "unit", "4.5", "$10.00", "$8.00", "Sold: 23/50")
         +top-offered-card("../assets/images/oat-milk.png", "-12%", "Oat milk barista", "unit", "5.0", "$8.00", "$5.00", "Sold: 12/35")
         +top-offered-card("../assets/images/relax-hearts.png", "-10%", "Dr. raw relax hearts", "unit", "3.0", "$5.00", "$3.00", "Sold: 5/25")
+
+  section.news-letter
+    .container
+      .news-letter-wrapper
+        .text-wrapper
+          h3.form-header Get 20% discount on your first purchase.
+          p.form-txt Just Sign Up &amp Register it now to become member of Templates Jungle.
+        .form-capture
+          label(for="email") Email address
+            +input("email", "search", "Email")
+          label(for="password") Password
+            +input("password", "search", "Create a password...")
+          label(for="password") Repeat password
+            +input("password", "search", "Repeat the password...")
+          button.register-btn Register it now
