@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 @use "../components/category-card/category-card.scss";
 @use "../components/new-arrivals-card/new-arrivals-card.scss";
 @use "../components/trending-products/trending-products-card.scss";
@@ -160,7 +161,7 @@ section.category {
     justify-content: space-between;
     align-items: baseline;
 
-    h2 {
+    .section-title {
       margin-bottom: 50px;
       text-transform: capitalize;
     }
@@ -197,7 +198,7 @@ section.new-arrivals {
     justify-content: space-between;
     align-items: baseline;
 
-    h2 {
+    .section-title {
       margin-bottom: 50px;
       text-transform: capitalize;
     }
@@ -238,9 +239,9 @@ section.trending-products {
     gap: 10px;
     margin-bottom: 30px;
 
-    h2 {
+    .section-title {
+      margin-bottom: 50px;
       text-transform: capitalize;
-      margin-bottom: 10px;
     }
 
     .trending-products-nav {
@@ -375,8 +376,9 @@ section.sales-cards {
 section.top-offered {
   margin-bottom: 150px;
 
-  .top-offered-txt {
+  .section-title {
     margin-bottom: 50px;
+    text-transform: capitalize;
   }
 
   .top-offered-products-cards {
@@ -402,6 +404,7 @@ section.top-offered {
 section.news-letter {
   background: #e9f3f8;
   padding: 100px;
+  margin-bottom: 100px;
 
   .news-letter-wrapper {
     display: grid;
@@ -448,6 +451,32 @@ section.news-letter {
         text-transform: uppercase;
         font-size: 16px;
       }
+    }
+  }
+}
+
+section.best-sellers {
+  .section-title {
+    margin-bottom: 50px;
+    text-transform: capitalize;
+  }
+
+  .cards-capture {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+
+    @media (max-width: 1400px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 1160px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 375px) {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

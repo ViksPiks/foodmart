@@ -19,15 +19,21 @@
     height: 235px;
     margin-bottom: 12px;
 
-    .like-icon {
+    .icon-capture {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #fff;
-      border: 1px solid #eaeaea;
-      border-radius: 50px;
-      height: 30px;
-      width: 30px;
+      justify-content: flex-end;
+      padding: 5px;
+
+      .like-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        border: 1px solid #eaeaea;
+        border-radius: 50px;
+        height: 30px;
+        width: 30px;
+      }
     }
   }
 
@@ -36,10 +42,11 @@
     display: block;
   }
 
-  h3 {
+  .product-title {
     text-transform: capitalize;
     margin-bottom: 4px;
     font-family: OpenSans-SemiBold, sans-serif;
+    font-size: 18px;
   }
 
   .txt-capture {

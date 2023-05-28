@@ -41,7 +41,7 @@ block content
   section.category
     .container
       .txt-wrapper
-        h2 Category
+        h2.section-title Category
         a.see-all(href="#") View all categories
           svg.arrow(width="8px", height="8px")
             use(href="../assets/svg/arrow-grey.svg#arrow-grey")
@@ -55,7 +55,7 @@ block content
   section.new-arrivals
     .container
       .txt-wrapper
-        h2 Newly arrived brands
+        h2.section-title Newly arrived brands
         a.see-all(href="#") View all categories
           svg.arrow(width="8px", height="8px")
             use(href="../assets/svg/arrow-grey.svg#arrow-grey")
@@ -67,7 +67,7 @@ block content
   section.trending-products
     .container
       .txt-wrapper
-        h2 Trending products
+        h2.section-title Trending products
         .trending-products-capture
           ul.trending-products-nav
             li.menu-item
@@ -117,7 +117,7 @@ block content
 
   section.top-offered
     .container
-      h2.top-offered-txt Top offered products
+      h2.section-title Top offered products
       .top-offered-products-cards
         +top-offered-card("../assets/images/barista-milk.png", "-25%", "Pacific barista beverage", "unit", "4.5", "$12.00", "$8.00", "Sold: 30/40")
         +top-offered-card("../assets/images/kombucha.png", "-35%", "Kombucha local lilikoi", "unit", "4.0", "$8.00", "$6.00", "Sold: 9/25")
@@ -139,3 +139,14 @@ block content
           label(for="password") Repeat password
             +input("password", "search", "Repeat the password...")
           button.register-btn Register it now
+
+  section.best-sellers
+    .container
+      .txt-wrapper
+        h2.section-title Best selling products
+        .cards-capture
+          +trending-products-card("../assets/images/honney-jar.png", "Amber pure honey", "unit", "4.5", "$18.00")
+          +trending-products-card("../assets/images/avocados.png", "Fresh local avocado", "kg", "4.0", "$10.00")
+          +trending-products-card("../assets/images/cashew-butter.png", "Pharma Cashew butter", "unit", "4.5", "$19.00")
+          +trending-products-card("../assets/images/milk.png", "Pure Dairy milk ", "unit", "5.0", "$8.00")
+          +trending-products-card("../assets/images/cake.png", "Suzane creamy Cupcake", "unit", "3.5", "$14.00")

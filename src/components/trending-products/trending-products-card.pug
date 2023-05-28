@@ -1,11 +1,12 @@
 mixin trending-products-card(imgUrl, title, measure, reviews, price)
   .trending-products-card
     .background
-      .like-icon
-        svg.heart-icon(width="16px", height="13px")
-          use(href="../assets/svg/heart-outline.svg#heart")
+      .icon-capture
+        .like-icon
+          svg.heart-icon(width="16px", height="13px")
+            use(href="../assets/svg/heart-outline.svg#heart")
       img.product-image(src=imgUrl, alt="food")
-    h3= title
+    h3.product-title= title
     .txt-capture
       span.measure= measure
       .reviews-capture
