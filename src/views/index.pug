@@ -4,6 +4,7 @@ include ../components/new-arrivals-card/new-arrivals-card.pug
 include ../components/trending-products/trending-products-card.pug
 include ../components/top-offered-card/top-offered-products.pug
 include ../components/inputs/input.pug
+include ../components/article-card/article-card.pug
 
 block head
   link(rel="stylesheet", href="index.scss")
@@ -150,3 +151,11 @@ block content
           +trending-products-card("../assets/images/cashew-butter.png", "Pharma Cashew butter", "unit", "4.5", "$19.00")
           +trending-products-card("../assets/images/milk.png", "Pure Dairy milk ", "unit", "5.0", "$8.00")
           +trending-products-card("../assets/images/cake.png", "Suzane creamy Cupcake", "unit", "3.5", "$14.00")
+  section.articles
+    .container
+      .txt-wrapper
+        h2.section-title Our latest articles
+      .article-cards-capture
+        +article-card("../assets/images/article1.png", "12 jan, 2021", "15 min", "Right way to preserve the fruits & other organics", "Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...")
+        +article-card("../assets/images/article2.png", "12 jan, 2021", "15 min", "How to maintain the freshness of vegetables", "Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...")
+        +article-card("../assets/images/article3.png", "12 jan, 2021", "15 min", "Right way to preserve the fruits & other organics", "Lorem ipsum dolor sit amet, consectetur adipi elit. Aliquet eleifend viverra enim tincidunt donec quam. A in arcu, hendrerit neque dolor morbi...")

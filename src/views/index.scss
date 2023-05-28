@@ -4,6 +4,7 @@
 @use "../components/trending-products/trending-products-card.scss";
 @use "../components/top-offered-card/top-offered-products.scss";
 @use "../components/inputs/input.scss";
+@use "../components/article-card/article-card.scss";
 
 section.sale-cards {
   background-image: url("/src/assets/images/bg.jpg");
@@ -456,6 +457,8 @@ section.news-letter {
 }
 
 section.best-sellers {
+  margin-bottom: 100px;
+
   .section-title {
     margin-bottom: 50px;
     text-transform: capitalize;
@@ -476,6 +479,28 @@ section.best-sellers {
       grid-template-columns: repeat(2, 1fr);
     }
     @media (max-width: 375px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+section.articles {
+  margin-bottom: 100px;
+
+  .section-title {
+    margin-bottom: 50px;
+    text-transform: capitalize;
+  }
+
+  .article-cards-capture {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @media (max-width: 870px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 700px) {
       grid-template-columns: repeat(1, 1fr);
     }
   }

@@ -1,0 +1,15 @@
+mixin article-card(imgUrl, date, time, title, text)
+  a.article-card
+    img.product-image(src=imgUrl, alt="article")
+    .content-box
+      .calendar-capture
+        .calendar-box
+          svg.arrow(width="10px", height="11px")
+            use(href="../assets/svg/calendar.svg#calendar")
+          span.date= date
+        .time-box
+          svg.arrow(width="11px", height="11px")
+            use(href="../assets/svg/clock.svg#clock")
+          span.time= time
+      h3= title
+      p= text
